@@ -1,2 +1,5 @@
 .ipynb_checkpoints/
+data/fixation_sequences/
+data/preference_matrices/
+data/salience_matrices/
 *.pyc
