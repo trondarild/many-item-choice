@@ -6,6 +6,15 @@ Thomas, A. W., Molter, F., & Krajbich, I. (2021). Uncovering the computational m
 
 All code underlying this project is contained in [src/](src/), with one [jupyter notebook](https://jupyter.org) for each figure of the manuscript. 
 
+## TAT notes
+to generate preference and salience matrices: 
+
+```bash
+python tat/extract_matrices.py
+```
+
+## Notes on source files
+* ```src/model-recovery.py``` - calculate WAIC for each model
 
 ## Local installation
 
