@@ -31,9 +31,9 @@ def merge_with_saliency(item_stim_df, saliency_df):
 
 def create_matrix(group_df, value_column, output_dir, subject, setsize, trial, matrix_type):
     values = group_df.reset_index()[value_column].values
-    matrix = np.zeros((6, 6))
+    matrix = np.zeros((1, int(setsize)))
     matrix.flat[:len(values)] = values
-    matrix_str = f'OUTPUT/6\n' + '\n'.join([' '.join(map(str, row)) for row in matrix])
+    matrix_str = f'OUTPUT/' + str(setsize) + '\n' + '\n'.join([' '.join(map(str, row)) for row in matrix])
     output_file_path = os.path.join(output_dir, f"s_{subject}_setsize_{setsize}_trial_{trial}_{matrix_type}.dat")
     # print(output_file_path)
     with open(output_file_path, 'w') as f:
